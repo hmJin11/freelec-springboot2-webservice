@@ -3,4 +3,4 @@
 .idea
 
 ###Intelij IDEA ###
-.properties
+application-oauth.properties
