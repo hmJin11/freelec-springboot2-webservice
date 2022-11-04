@@ -1,12 +1,8 @@
 package com.jojoldu.book.springboot.web.dto;
 
 import com.jojoldu.book.springboot.domain.posts.Posts;
-import javafx.geometry.Pos;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-import javax.xml.ws.BindingType;
 
 @Getter
 public class PostsSaveRequestDto {
