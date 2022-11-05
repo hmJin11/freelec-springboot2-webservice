@@ -1,6 +1,6 @@
 package com.jojoldu.book.springboot.web.dto;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
+import com.jojoldu.book.springboot.domain.posts.Post;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ public class PostsListResponseDto {
     private String author;
     private LocalDateTime modifiedDate;
 
-    public PostsListResponseDto(Posts entity){
+    public PostsListResponseDto(Post entity){
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.author = entity.getAuthor();

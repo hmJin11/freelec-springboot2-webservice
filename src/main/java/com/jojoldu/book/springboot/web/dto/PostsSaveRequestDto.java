@@ -1,6 +1,6 @@
 package com.jojoldu.book.springboot.web.dto;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
+import com.jojoldu.book.springboot.domain.posts.Post;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -17,8 +17,8 @@ public class PostsSaveRequestDto {
         this.author = author;
     }
 
-    public Posts toEntity(){
-        return Posts.builder()
+    public Post toEntity(){
+        return Post.builder()
                 .title(title)
                 .content(content)
                 .author(author)

@@ -30,17 +30,17 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Post.builder()
                         .title(title)
                         .content(content)
                         .author("author")
                         .build());
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Post> postsList = postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
+        Post posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
 
@@ -50,17 +50,17 @@ public class PostsRepositoryTest {
     public void BaseTimeEntity_등록(){
         //given
         LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Post.builder()
                         .title("title")
                         .content("content")
                         .author("author")
                         .build());
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Post> postsList = postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
+        Post posts = postsList.get(0);
 
         System.out.println(">>>>>>>>>>>> createDate = "+posts.getCreatedDate()+", modifiedDate = " + posts.getModifiedDate());
 
